@@ -448,6 +448,8 @@ int main(int argc, char const *argv[])
 					}else{
 						cout<<"Ganador Aragami"<<endl;
 					}
+					delete destructor;
+					delete salvador;
 				}
 				break;
 			}
@@ -455,7 +457,6 @@ int main(int argc, char const *argv[])
 	} while (opcion != 5);
 	aragamis.clear();
 	peleadores.clear();
-	delete destructor;
-	delete salvador;
+	
 	return 0;
 }
