@@ -442,6 +442,9 @@ int main(int argc, char const *argv[])
 					if (vidaheroe > 0)
 					{
 						cout<<"Ganador GodEater"<<endl;
+						int nivelactual = peleadores.at(heroe)->getNivel();
+						peleadores.at(heroe)->setNivel(nivelactual+1);
+
 					}else{
 						cout<<"Ganador Aragami"<<endl;
 					}
@@ -452,5 +455,7 @@ int main(int argc, char const *argv[])
 	} while (opcion != 5);
 	aragamis.clear();
 	peleadores.clear();
+	delete destructor;
+	delete salvador;
 	return 0;
 }
