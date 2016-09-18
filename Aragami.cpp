@@ -1,6 +1,9 @@
 #include "Aragami.h"
 #include <string>
 #include <iostream>
+#include <sstream>
+#include <string>
+using std::stringstream;
 using std::string;
 using namespace std;
 
@@ -8,7 +11,8 @@ Aragami::Aragami(){
 
 }
 
-Aragami::Aragami(int life,int defense,int ataque){
+Aragami::Aragami(string nom,int life,int defense,int ataque){
+	nombre = nom;
 	vida = life;
 	niveldef = defense;
 	nivelataq = ataque;
@@ -57,4 +61,16 @@ void Aragami::setTipo(){
 }
 string Aragami::getTipo(){
 	return tipo;
+}
+void Aragami::setNombre(string nombress){
+	nombre = nombress;
+}
+
+string Aragami::getNombre(){
+	return nombre;
+}
+string Aragami::toString()const{
+	stringstream ss;
+	ss<<"Aragami Nombre:"<<nombre<<" Vida: "<<vida<<" Ataque: "<<nivelataq<<" Defensa: "<<niveldef<<" Tipo: "<<tipo;
+	return ss.str();
 }

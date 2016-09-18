@@ -1,5 +1,9 @@
 #include "BusterSword.h"
 #include "GodArc.h"
+#include <sstream>
+#include <string>
+using std::stringstream;
+using std::string;
 
 BusterSword::BusterSword(int atack,int cruch,int poderr):GodArc(atack),crush(cruch),poderexpl(poderr){
 
@@ -25,5 +29,7 @@ int BusterSword::getPoder(){
 }
 
 string BusterSword::toString()const{
-	
+	stringstream ss;
+	ss<<"BusterSword "<<GodArc::toString()<<" Nivel Crush: "<<crush<<" Poder Explosivo: "<<poderexpl;
+	return ss.str();
 }

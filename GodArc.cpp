@@ -45,5 +45,6 @@ string GodArc::getTipo(){
 }
 string GodArc::toString()const{
 	stringstream ss;
+	ss<<" Ataque: "<<ataque<<" Tipo: "<<tipo;
 	return ss.str();
 }

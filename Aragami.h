@@ -3,13 +3,14 @@
 using std::string;
 class Aragami{
 	private:
+		string nombre;
 		int vida;
 		int niveldef;
 		string tipo;
 		int nivelataq;
 	public:
 		Aragami();
-		Aragami(int,int,int);
+		Aragami(string,int,int,int);
 		void setVida(int);
 		int getVida();
 		void setDefensa(int);
@@ -18,5 +19,7 @@ class Aragami{
 		int getAtaque();
 		void setTipo();
 		string getTipo();
-
+		void setNombre(string);
+		string getNombre();
+		string toString()const;
 };

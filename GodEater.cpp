@@ -1,14 +1,19 @@
 #include "GodArc.h"
 #include "GodEater.h"
 #include <string>
+#include <sstream>
+using std::stringstream;
 #include <iostream>
 using namespace std;
 
 GodEater::GodEater(){
 
 }
-
-GodEater::GodEater(int niv,GodArc* nueva){
+GodEater::~GodEater(){
+	delete arma;
+}
+GodEater::GodEater(string nom,int niv,GodArc* nueva){
+	nombre = nom;
 	nivel = niv;
 	arma = nueva;
 	setVida();
@@ -41,4 +46,16 @@ int GodEater::getNivel(){
 
 GodArc* GodEater::getArma(){
 	return arma;
+}
+void GodEater::setNombre(string nombress){
+	nombre = nombress;
+}
+
+string GodEater::getNombre(){
+	return nombre;
+}
+string GodEater::toString()const{
+	stringstream ss;
+	ss<<"GodEater: Nombre: "<<nombre<<"Vida: "<<vida<<" Defensa: "<<niveldef<<" GodArc: "<<arma->toString();
+	return ss.str();
 }

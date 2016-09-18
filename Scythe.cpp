@@ -1,5 +1,9 @@
 #include "GodArc.h"
 #include "Scythe.h"
+#include <sstream>
+#include <string>
+using std::stringstream;
+using std::string;
 
 Scythe::Scythe():GodArc(){
 	
@@ -24,5 +28,7 @@ int Scythe::getPoderS(){
 	return poderspeedcut;
 }
 string Scythe::toString()const{
-	
+	stringstream ss;
+	ss<<"Scythe "<<GodArc::toString()<<" Nivel Slash: "<<slash<<" Poder Corte: "<<poderspeedcut;
+	return ss.str();
 }
