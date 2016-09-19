@@ -398,6 +398,8 @@ int main(int argc, char const *argv[])
 				}
 				break;
 			}
+
+			
 			case 4:{
 				if (aragamis.size() > 0 && peleadores.size() > 0)
 				{
@@ -457,6 +459,5 @@ int main(int argc, char const *argv[])
 	} while (opcion != 5);
 	aragamis.clear();
 	peleadores.clear();
-	
 	return 0;
 }
