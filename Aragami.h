@@ -10,6 +10,7 @@ class Aragami{
 		int nivelataq;
 	public:
 		Aragami();
+		~Aragami();
 		Aragami(string,int,int,int);
 		void setVida(int);
 		int getVida();

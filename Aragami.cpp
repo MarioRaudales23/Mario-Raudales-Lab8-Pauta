@@ -10,6 +10,9 @@ using namespace std;
 Aragami::Aragami(){
 
 }
+Aragami::~Aragami(){
+
+}
 
 Aragami::Aragami(string nom,int life,int defense,int ataque){
 	nombre = nom;
