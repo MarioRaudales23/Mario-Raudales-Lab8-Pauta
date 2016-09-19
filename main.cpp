@@ -454,6 +454,7 @@ int main(int argc, char const *argv[])
 				break;
 			}
 		}
+		
 	} while (opcion != 5);
 	aragamis.clear();
 	peleadores.clear();
