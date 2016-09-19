@@ -8,6 +8,7 @@ class GodArc{
 	public:
 		GodArc(int);
 		GodArc();
+		~GodArc();
 		void setAtaque(int);
 		int getAtaque();
 		void setTipo();

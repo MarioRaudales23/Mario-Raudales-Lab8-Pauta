@@ -7,7 +7,9 @@ using namespace std;
 GodArc::GodArc(){
 	
 }
+GodArc::~GodArc(){
 
+}
 GodArc::GodArc(int atack){
 	ataque = atack;
 	setTipo();
